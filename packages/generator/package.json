@@ -2,5 +2,10 @@
   "name": "generator",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.9.3",
+    "node-divoom-timebox-evo": "^0.3.0",
+    "ts-node": "^10.9.1"
+  }
 }
