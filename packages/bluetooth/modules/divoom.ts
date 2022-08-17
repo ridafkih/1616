@@ -16,16 +16,11 @@ const onDeviceFound = (channel: number) => {
   return new Promise((resolve) => {
     const onConnect = makeOnConnect(resolve);
 
-    bluetooth.connect(
-      BLUETOOTH_ADDRESS!,
-      channel,
-      onConnect,
-      bluetooth.close
-    );
+    bluetooth.connect(BLUETOOTH_ADDRESS!, channel, onConnect, bluetooth.close);
   });
 };
 
-export const searchAndConnect = () => {
+(function searchAndConnect() {
   return new Promise((resolve) => {
     bluetooth.findSerialPortChannel(
       BLUETOOTH_ADDRESS!,
@@ -35,7 +30,7 @@ export const searchAndConnect = () => {
       () => setTimeout(searchAndConnect, 5000)
     );
   });
-};
+})();
 
 export const sendAnimation = (frames: string[]) => {
   if (!connected) return false;
