@@ -1,4 +1,7 @@
 {
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
@@ -12,7 +15,7 @@
 			"*": ["./*"]
 		},
 		"types": ["node"],
-    "typeRoots": ["./lib/@types", "./lib/node_modules/@types"]
+    "typeRoots": ["./@types", "./node_modules/@types"]
   },
   "include": ["**/*"]
 }
