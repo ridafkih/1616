@@ -20,7 +20,7 @@ export default route({
 
       return {
         status: 200,
-        body: { frames },
+        body: { frames, pixels: pixelMap },
       };
     },
   }),

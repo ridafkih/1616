@@ -8,6 +8,7 @@ export type PixelRequestSchema = validation.infer<typeof pixelRequestSchema>;
 
 export const pixelResponseSchema = validation.object({
   frames: validation.array(validation.string()),
+  pixels: validation.array(validation.number()),
 });
 
 export type PixelResponseSchema = validation.infer<typeof pixelResponseSchema>;

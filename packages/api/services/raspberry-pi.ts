@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getPixels } from "modules/pixel-map";
 import type { PixelResponseSchema } from "packages/api/models/pixel-requests";
 
 const { RASPBERRY_PI_IP } = process.env;
@@ -12,7 +13,8 @@ const { RASPBERRY_PI_IP } = process.env;
 export const makeUpdateScreenRequest = (frames: string[]) => {
   if (!RASPBERRY_PI_IP) return console.error("RASPBERRY_PI_IP not set");
 
-  const data = { frames };
+  const pixels = getPixels();
+  const data = { frames, pixels };
 
   return axios
     .post<null, boolean, PixelResponseSchema>(

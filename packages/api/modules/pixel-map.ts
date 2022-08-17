@@ -10,3 +10,5 @@ export const flipPixels = (...flippedPixels: number[]) => {
 
   return pixels;
 };
+
+export const getPixels = () => pixels;
