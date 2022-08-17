@@ -12,7 +12,7 @@ const makeOnConnect = (callback: (connected: boolean) => void) => {
   };
 };
 
-const onDeviceFound = (channel: unknown) => {
+const onDeviceFound = (channel: number) => {
   return new Promise((resolve) => {
     const onConnect = makeOnConnect(resolve);
 
@@ -29,7 +29,7 @@ export const searchAndConnect = () => {
   return new Promise((resolve) => {
     bluetooth.findSerialPortChannel(
       BLUETOOTH_ADDRESS!,
-      (channel: unknown) => {
+      (channel: number) => {
         onDeviceFound(channel).then(resolve);
       },
       () => setTimeout(searchAndConnect, 5000)
