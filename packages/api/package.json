@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "18h": "^3.0.15"
+    "18h": "^3.0.15",
+    "axios": "^0.27.2"
   }
 }
