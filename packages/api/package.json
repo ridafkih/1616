@@ -4,7 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node ."
+    "dev": "nodemon"
   },
   "dependencies": {
     "18h": "^3.0.15",
