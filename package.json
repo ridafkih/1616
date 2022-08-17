@@ -1,0 +1,7 @@
+{
+  "name": "divuwu",
+  "description": "A controller platform for the Divoom Ditoo to control its adorable 16x16 pixel display.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
