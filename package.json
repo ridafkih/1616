@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "scripts": {
+    "deploy:api": "cd packages/api && yarn install --focus && yarn dev",
     "deploy:bluetooth": "cd packages/bluetooth && yarn install --focus && yarn dev"
   },
   "devDependencies": {
