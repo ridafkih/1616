@@ -1,6 +1,6 @@
 {
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
+    "require": ["tsconfig-paths/register", "dotenv/config"]
   },
   "compilerOptions": {
     "target": "es2016",
