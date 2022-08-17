@@ -17,7 +17,7 @@ const onDeviceFound = (channel: unknown) => {
     const onConnect = makeOnConnect(resolve);
 
     bluetooth.connect(
-      BLUETOOTH_ADDRESS,
+      BLUETOOTH_ADDRESS!,
       channel,
       onConnect,
       bluetooth.close
@@ -28,7 +28,7 @@ const onDeviceFound = (channel: unknown) => {
 export const searchAndConnect = () => {
   return new Promise((resolve) => {
     bluetooth.findSerialPortChannel(
-      BLUETOOTH_ADDRESS,
+      BLUETOOTH_ADDRESS!,
       (channel: unknown) => {
         onDeviceFound(channel).then(resolve);
       },
