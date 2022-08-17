@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "dependencies": {
     "18h": "^3.0.15",
     "bluetooth-serial-port": "^3.0.0"
