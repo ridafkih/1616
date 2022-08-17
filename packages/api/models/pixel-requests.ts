@@ -1,7 +1,7 @@
 import { validation } from "18h";
 
 export const pixelRequestSchema = validation.object({
-  pixels: validation.array(validation.number()).length(16 * 16),
+  pixels: validation.array(validation.number()),
 });
 
 export type PixelRequestSchema = validation.infer<typeof pixelRequestSchema>;
