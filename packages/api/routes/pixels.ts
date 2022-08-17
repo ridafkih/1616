@@ -5,6 +5,7 @@ import {
   pixelResponseSchema,
 } from "packages/api/models/pixel-requests";
 import { flipPixels } from "../modules/pixel-map";
+import { makeUpdateScreenRequest } from "utils/raspberry-pi";
 
 export default route({
   post: method({
@@ -16,7 +17,9 @@ export default route({
     async handler(context) {
       const { pixels } = context.request.body;
       const pixelMap = flipPixels(...pixels);
+
       const frames = await generateImage(pixelMap);
+      await makeUpdateScreenRequest(frames)
 
       return {
         status: 200,
