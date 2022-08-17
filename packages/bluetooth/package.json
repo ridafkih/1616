@@ -1,0 +1,10 @@
+{
+  "name": "bluetooth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "18h": "^3.0.15",
+    "bluetooth-serial-port": "^3.0.0"
+  }
+}

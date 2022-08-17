@@ -1,11 +1,8 @@
 import { method, route } from "18h";
-import { generateImage } from "packages/api/utils/image-generation";
-import {
-  pixelRequestSchema,
-  pixelResponseSchema,
-} from "packages/api/models/pixel-requests";
-import { flipPixels } from "../modules/pixel-map";
-import { makeUpdateScreenRequest } from "utils/raspberry-pi";
+import { pixelRequestSchema, pixelResponseSchema } from "models/pixel-requests";
+import { flipPixels } from "modules/pixel-map";
+import { makeUpdateScreenRequest } from "services/raspberry-pi";
+import { generateImage } from "utils/image-generation";
 
 export default route({
   post: method({
@@ -19,7 +16,7 @@ export default route({
       const pixelMap = flipPixels(...pixels);
 
       const frames = await generateImage(pixelMap);
-      await makeUpdateScreenRequest(frames)
+      await makeUpdateScreenRequest(frames);
 
       return {
         status: 200,

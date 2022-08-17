@@ -2,6 +2,6 @@ import { join } from "path";
 import { router } from "18h";
 
 router({
-  port: 80,
+  port: 8000,
   routesFolder: join(__dirname, "routes"),
 });

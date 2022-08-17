@@ -1,0 +1,1 @@
+declare module "bluetooth-serial-port";
